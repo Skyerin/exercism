@@ -1,4 +1,4 @@
-var swapNewLineForSpaces = function (input) {
+var swapNewLineForSpace = function (input) {
 
     var cleanInput = input.trim();
 
@@ -7,7 +7,7 @@ var swapNewLineForSpaces = function (input) {
 
 var getArrayOfWords = function (input) {
 
-    var cleanInput = swapNewLineForSpaces(input);
+    var cleanInput = swapNewLineForSpace(input);
 
     return cleanInput.split(" ");
 };
@@ -21,7 +21,7 @@ var getCountObjectOfWords = function (input) {
 
         if (wordCountObject.hasOwnProperty(wordArray[i])) {
 
-            wordCountObject[wordArray[i]] = wordCountObject[wordArray[i]] + 1;
+            wordCountObject[wordArray[i]]++;
         } else {
 
             wordCountObject[wordArray[i]] = 1;
